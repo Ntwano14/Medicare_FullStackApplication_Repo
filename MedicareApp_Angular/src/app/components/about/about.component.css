@@ -1,0 +1,22 @@
+.content-indentation {
+    padding-top: 6rem;
+    min-height: 100vh;
+}
+.content-indentation h1 {
+    text-align: center;
+    color: rgb(238, 233, 237);
+    padding-bottom: 3rem;
+}
+.data {
+    color: hsla(120, 17%, 98%, 0.945);
+    font-size: larger;
+    padding-top: 5rem;
+    padding-left: 20rem;
+    padding-right: 20rem;
+}
+
+.data-body {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px rgb(255, 255, 255);
+}

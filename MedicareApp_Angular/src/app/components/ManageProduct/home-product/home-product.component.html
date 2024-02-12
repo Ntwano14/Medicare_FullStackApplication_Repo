@@ -1,0 +1,41 @@
+<section>
+    <div class="content-indentation">
+        <div class="row">
+            <div class="col-lg-2 nav-product">
+                <ul class="nav flex-column">
+
+                    <li class="nav-item">
+                        {{username}}
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" routerLink="product-list">
+                            <button>Product List</button>
+                        </a>
+                    </li>
+        
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="add-product">
+                            <button>Add Product</button>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="order-list">
+                            <button>Order List</button>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="change-password">
+                            <button>Change Password</button>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-lg-10">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</section>

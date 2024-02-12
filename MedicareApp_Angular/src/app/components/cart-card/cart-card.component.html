@@ -1,0 +1,120 @@
+<section class="h-100 gradient-custom">
+  <div class="container py-5">
+    <div class="row d-flex justify-content-center my-4">
+      <div class="col-md-8">
+        <div class="card mb-4">
+          <div class="card-header py-3">
+            <h5 class="mb-0">Cart - {{cartData.length}} items</h5>
+          </div>
+          <div class="card-body">
+
+            <!-- Single item -->
+            <div class="row" *ngFor="let cart of cartData">
+
+              <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+                  <img src={{cart.imgURL}} class="w-100" alt="Blue Jeans Jacket" />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                <p><strong>Medicine Name: </strong>{{cart.medicineName | titlecase}}</p>
+                <!-- <p>{{cart.cartId}}</p> -->
+                <p><strong>Seller/Brand: </strong>{{cart.seller | titlecase}}</p>
+                <p><strong>Quantity: </strong>{{cart.quantity}} Tablet(s) in Strip</p>
+                <p><strong>Description: </strong>{{cart.description | titlecase}}</p>
+
+                <button type="button" (click)="deleteCart(cart)" class="btn btn-danger btn-sm me-1 mb-2"
+                  data-bs-toggle="tooltip" title="Remove item">
+                  <i class="bi bi-trash3-fill"></i>
+                </button>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+
+                <div class="d-flex mb-4" style="max-width: 300px">
+                  <button class="btn btn-custom px-3 me-2" style="height: 37px;" (click)="dec(qty.value)"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                    <i class="bi bi-dash-lg"></i>
+                  </button>
+
+                  <div class="form-outline">
+                    <input id="form1" min="0" name="quantity" value="1" #qty type="number" class="form-control" />
+                    <label class="form-label" for="form1">Quantity</label>
+                  </div>
+
+                  <button class="btn btn-custom px-3 ms-2" style="height: 37px;" (click)="dec(qty.value)"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                    <i class="bi bi-plus-lg"></i>
+                  </button>
+                </div>
+
+                <p class="text-start text-md-center">
+                  <strong>{{cart.price*qtyVal | currency: 'INR'}}</strong>
+                </p>
+
+              </div>
+              <hr class="my-4" />
+            </div>
+            <!-- Single item -->
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-header py-3">
+            <h5 class="mb-0">Customer Details</h5>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row g-3">
+
+                <div class="col-lg-8">
+                  <label class="form-label">Name</label>
+                  <input type="text" required class="form-control" placeholder="name" #name >
+                </div>
+
+                <div class="col-lg-4">
+                  <label class="form-label">Age</label>
+                  <input type="text" required class="form-control" placeholder="age" #age>
+                </div>
+
+                <div class="col-lg-4">
+                  <label class="form-label">Gender</label>
+                  <input type="text" required class="form-control" placeholder="gender" #gender>
+                </div>
+                <div class="col-lg-8">
+                  <label class="form-label">E-mail</label>
+                  <input type="text" required class="form-control" placeholder="email" #email>
+                </div>
+                <div class="col-lg-12">
+                  <label class="form-label">Address</label>
+                  <input type="text" required class="form-control" placeholder="address" #address>
+                </div>
+                <div class="col-lg-12">
+                  <label class="form-label">Mobile</label>
+                  <input type="text" required class="form-control" placeholder="mobile number" #mobile>
+                </div>
+                <div class="col-lg-12">
+                  <button type="button"
+                    (click)="placeOrder(cartData, name.value, age.value, gender.value, email.value, address.value, mobile.value)"
+                    class="btn  btn-custom">
+                    Place Order
+                  </button>
+                </div>
+              </div>
+            </form>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

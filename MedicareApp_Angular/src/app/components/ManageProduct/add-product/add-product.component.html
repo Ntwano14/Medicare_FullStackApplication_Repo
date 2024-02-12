@@ -1,0 +1,76 @@
+<section>
+  <div class="add-pro">
+    <h1>Add Product</h1>
+    <div class="form-container">
+
+      <form [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label">Medicine Name</label>
+            <input type="text" placeholder="medicine name" formControlName="name" class="form-control" [(ngModel)]="productList.medicineName"
+              [ngClass]="{'is-invalid':submitted && form['name'].errors}">
+
+            <div *ngIf="submitted && form['name'].errors" class="invalid-feedback">
+              Medicine Name Cannot be Empty
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Seller</label>
+            <input type="text" placeholder="Seller/Brand name" formControlName="seller" class="form-control" [(ngModel)]="productList.seller"
+              [ngClass]="{'is-invalid':submitted && form['seller'].errors}">
+
+            <div *ngIf="submitted && form['seller'].errors" class="invalid-feedback">
+              Seller/Brand Cannot be Empty
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Image URL</label>
+            <input type="text" placeholder="medicine image url" formControlName="url" class="form-control" [(ngModel)]="productList.imgURL"
+              [ngClass]="{'is-invalid':submitted && form['url'].errors}">
+
+            <div *ngIf="submitted && form['url'].errors" class="invalid-feedback">
+              Medicine Image URL Cannot be Empty
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Medicine Qty (in a Strip)</label>
+            <input type="text" placeholder="medicine Quantity in a strip" formControlName="qty" class="form-control" [(ngModel)]="productList.qtyDesc"
+              [ngClass]="{'is-invalid':submitted && form['qty'].errors}">
+
+            <div *ngIf="submitted && form['qty'].errors" class="invalid-feedback">
+              Medicine Quantity Cannot be Empty
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <label class="form-label">Price</label>
+            <input type="text" placeholder="medicine price" formControlName="price" class="form-control" [(ngModel)]="productList.price"
+              [ngClass]="{'is-invalid':submitted && form['price'].errors}">
+
+            <div *ngIf="submitted && form['price'].errors" class="invalid-feedback">
+              Price Cannot be Empty
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Description</label>
+            <input type="text" placeholder="description of medicine" formControlName="desc" class="form-control" [(ngModel)]="productList.description"
+              [ngClass]="{'is-invalid':submitted && form['desc'].errors}">
+
+            <div *ngIf="submitted && form['desc'].errors" class="invalid-feedback">
+              Description Cannot be Empty
+            </div>
+          </div>
+          <br>
+          <div class="col-12">
+            <button class="btn btn-success">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</section>

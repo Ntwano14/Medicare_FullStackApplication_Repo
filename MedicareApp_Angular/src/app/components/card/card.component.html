@@ -1,0 +1,43 @@
+
+<div class="container">
+    <div class="row row-cols-3 mb-5">
+      
+      <!-- single item -->
+      <div class="col" *ngFor="let prod of productList | filter: filterData">
+        <section class="mx-auto cus-inden" style="max-width: 23rem;"> 
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                <img src={{prod.imgURL}} class="img-fluid" />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold"><a>{{prod.medicineName}}</a></h5>
+                <p class="mb-2">{{prod.seller}}</p>
+                <ul class="list-unstyled list-inline mb-0">
+                  <li class="list-inline-item">
+                    <p class="text-muted">{{prod.qtyDesc}} Tablet(s) in Strip</p>
+                  </li>
+
+                  <li class="list-inline-item">
+                    <h4><span class="badge bg-warning text-dark rounded-pill">{{prod.price | currency: 'ZAR'}}</span></h4>
+                  </li>
+                  
+                </ul>
+                <p class="card-text">
+                   {{prod.description}}
+                </p>
+                <button class="cus-btn" (click)="order(prod.medicineName, prod.seller, prod.price, prod.description, prod.imgURL, prod.qtyDesc)">
+                    <span class="label">Add to Cart</span>
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+                    </span>
+                </button>
+              </div>
+            </div>
+          </section>
+      </div>
+      <!-- Single Item -->
+      
+    </div><br><br>
+  </div>
+  
+

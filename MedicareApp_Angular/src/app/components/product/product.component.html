@@ -1,0 +1,12 @@
+<section>
+    <div class="content-indentation">
+        <div class="container">
+            <div>
+                <div class="input-group rounded">
+                  <input type="text" class="form-control rounded" placeholder="Search" [(ngModel)]="enteredData"/>
+                </div>
+              </div>
+        </div>
+        <app-card [filterData] = "enteredData"></app-card>
+    </div>
+</section>

@@ -1,0 +1,33 @@
+.content-indentation {
+    padding-top: 6rem;
+    min-height: 100vh;
+}
+.content-indentation h1 {
+    text-align: center;
+    color: white;
+    padding-bottom: 3rem;
+}
+.data {
+    color: white;
+    font-size: larger;
+    padding-top: 5rem;
+    padding-left: 20rem;
+    padding-right: 20rem;
+    text-align: center;
+}
+
+.data-body {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px yellowgreen;
+}
+.data-text {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.data-text .icon {
+    font-size: 2rem;
+    color: yellowgreen;
+    margin: 0 5rem 0 15rem;
+}

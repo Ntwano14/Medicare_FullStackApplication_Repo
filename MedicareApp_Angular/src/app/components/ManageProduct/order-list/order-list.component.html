@@ -1,0 +1,45 @@
+<section>
+    <div class="or-list">
+        <h1>Order List</h1>
+        <div class="table-responsive">
+        <table class="table table-dark table-striped table-hover table-borderless align-middle">
+            <thead>
+              <tr>
+                <th>C.ID</th>
+                <th>Name</th>
+                <th>email</th>
+                <th>Mobile</th>
+                <th>Address</th>
+                <th>Medicine Name</th>
+                <th>Seller</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Date/Time</th>
+                <th>Operations</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- single  -->
+              <tr *ngFor="let order of orderList">
+                <td>{{order.cusId}}</td>
+                <td>{{order.name | titlecase}}</td>
+                <td>{{order.email}}</td>
+                <td>{{order.mobile}}</td>
+                <td>{{order.address | titlecase}}</td>
+                <td>{{order.medicineName | titlecase}}</td>
+                <td>{{order.seller | titlecase}}</td>
+                <td>{{order.price | currency: 'ZAR ' }}</td>
+                <td>{{order.description}}</td>
+                <td>{{order.quantity}}</td>
+                <td>{{order.orderDateTime | date: 'd MMM y, h:mm:ss a'}}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="orderDelete(order.cusId)">Delete</button>
+                </td>
+              </tr>
+              <!-- single -->
+            </tbody>
+          </table>
+        </div>
+    </div>
+</section>

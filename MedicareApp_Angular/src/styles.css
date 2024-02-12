@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background-image: url(./assets/images/background1.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* ------------------fonts start here----------------------- */
+
+@font-face {
+    font-family: 'LogoFont-1';
+    src: url('./assets/fonts/Pacifico-Regular.ttf');
+}
+@font-face {
+    font-family: 'LogoFont-2';
+    src: url('./assets/fonts/NotoSerifAhom-Regular.ttf');
+}
+/* ------------------fonts end here---------------------- */
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

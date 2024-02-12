@@ -1,0 +1,13 @@
+.pro-details {
+    color: white;
+    padding-top: 6rem;
+    min-height: 100vh;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+.pro-details h1{
+    text-align: center;
+}
+.custom-content {
+    padding: 50px 100px;
+}

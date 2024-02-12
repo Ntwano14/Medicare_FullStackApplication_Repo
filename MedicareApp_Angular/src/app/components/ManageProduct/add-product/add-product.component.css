@@ -1,0 +1,11 @@
+.add-pro {
+    color: white;
+    margin: 0;  
+}
+.add-pro h1 {
+    padding-top: 3rem;
+    text-align: center;
+}
+.form-container {
+   padding: 70px 100px;
+}

@@ -1,0 +1,45 @@
+<section>
+    <div class="pro-list">
+        <h1>Product List</h1>
+        <table class="table table-dark table-striped table-hover table-borderless">
+            <thead>
+              <tr>
+                <th scope="col">P. ID</th>
+                <th scope="col">Medicine Name</th>
+                <th scope="col">Seller</th>
+                <th scope="col">Price</th>
+                <th scope="col">Description</th>
+                <th scope="col">Image URL</th>
+                <th scope="col">Qty Desc</th>
+                <th scope="col">Active</th>
+                <th scope="col">Date/Time</th>
+                <th scope="col">Operations</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <!-- Single Cell -->
+              <tr *ngFor="let proList of productList">
+                <td>{{ proList.productListId }}</td>
+                <td>{{ proList.medicineName | slice:0:16 }}</td>
+                <td>{{ proList.seller | slice:0:10}}</td>
+                <td>{{ proList.price | currency: 'ZAR ' }}</td>
+                <td>{{ proList.description | slice:0:19}}</td>
+                <td>{{ proList.imgURL | slice:0:20}}</td>
+                <td>{{ proList.qtyDesc | slice:0:9 }}</td>
+                <td>{{ proList.active }}</td>
+                <td>{{ proList.creationDateTime | date:'d MMM y, h:mm:ss a'}}</td>
+                <td>
+                    <button class="btn btn-success" routerLink="/product-details/{{ proList.productListId }}">View</button>
+        
+                    <button class="btn btn-primary mx-2" routerLink="./edit-product/{{proList.productListId}}">Edit</button>
+                    
+                    <button class="btn btn-danger" (click)="delete(proList.productListId)">Delete</button>
+                </td>
+              </tr>
+              <!-- Single Cell  -->
+
+            </tbody>
+          </table>
+    </div>
+</section>

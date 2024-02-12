@@ -1,0 +1,40 @@
+<section>
+    <div class="pro-details">
+        <table class="table table-dark table-borderless">
+            
+            <div class="custom-content">
+                <tr>
+                    <td>
+                        <h1>Product Details : {{productList.productListId}}</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Medicine Name: </strong> {{productList.medicineName}}</td>
+                    
+                </tr>
+                <tr>
+                    <td><strong>Seller: </strong> {{productList.seller}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Price: </strong>{{productList.price | currency: 'ZAR ' }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Qty Desc: </strong>{{productList.qtyDesc}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Active: </strong>{{productList.active}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Date/Time: </strong>{{ productList.creationDateTime | date:'d MMM y, h:mm:ss a'}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Image URL: </strong>{{productList.imgURL}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Description: </strong>{{productList.description}}</td>
+                </tr>
+
+            </div>
+        </table>
+    </div>
+</section>

@@ -1,0 +1,65 @@
+/* .cus-btn {
+    padding: 6px 30px;
+} */
+.container {
+    text-align: center;
+}
+.cus-inden {
+    margin-top: 2rem;
+    margin-bottom: 0px;
+}
+
+/*------------------------------- Buttons---------------------------- */
+.cus-btn {
+    position: relative;
+    font-size: 14px;
+    letter-spacing: 3px;
+    height: 3em;
+    padding: 0 3em;
+    border: none;
+    background-color: #7fba20;
+    color: #fff;
+    text-transform: uppercase;
+    overflow: hidden;
+    border-radius: 5px
+   }
+   
+   .cus-btn::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    height: 0px;
+    width: 100%;
+    background: rgb(196,27,84);
+    background: linear-gradient(90deg, rgba(196,27,84,1) 20%, rgba(124,7,46,1) 100%);
+    transition: 0.2s;
+   }
+   
+   .cus-btn .label {
+    position: relative;
+   }
+   
+   .cus-btn .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 3em;
+    position: absolute;
+    top: 3em;
+    right: 0;
+    opacity: 0;
+    transition: 0.4s;
+   }
+   
+   .cus-btn:hover::before {
+    height: 100%;
+   }
+   
+   .cus-btn:hover .icon {
+    top: 0;
+    opacity: 1;
+   }
